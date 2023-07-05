@@ -30,7 +30,7 @@ console.log("EXERCISE 2:\nFizzBuzz\n");
 for (let i = 1; i < 100; i++) {
   console.log(i);
   if (i % 3 == 0 && i % 5 == 0) {
-    console.log((i), "FizBuzz");
+    console.log((i), "FizzBuzz");
   } else {
     if (i % 3 == 0) {
       console.log((i), "Fizz");
@@ -43,14 +43,14 @@ for (let i = 1; i < 100; i++) {
 
 for (let i = 1; i <= 100; i++) {
   if (i % 15 == 0) {
-    console.log((i), "Fizzbuzz");
+    console.log(i, "Fizzbuzz");
   } else if (i % 5 == 0) {
-    console.log((i), "Buzz");
+    console.log(i, "Buzz");
   } else if (i % 3 == 0) {
-    console.log((i), "Fizz");
+    console.log(i, "Fizz");
   }
 }
-
+//Exercise 3 while and Do /while
 i = 1;
 
 while (i <= 100) {
@@ -65,11 +65,28 @@ while (i <= 100) {
   }
   i++;
 }
-// exersize 3//
-let numberToFind = Math.round((Math.random() * 500));
- // creates a random number between 0 and 500
+
+let x = 1;
+
+do {
+  let output = "";
+
+  if (x % 3 == 0) {
+    output += "Fizz";
+  }
+  if (x % 5 == 0) {
+    output += "Buzz";
+    console.log(`${x} ${output}`);
+  }
+  x++;
+} while (x <= 100);
+ 
+// exersize 4 Find Value//
+
+let numberToFind = Math.round(Math.random() * 500);
+
 let n = Math.round(Math.random() * (500 - 100) + 100); 
-// creates a random number between 100 and 500
+
  for (let i = 1; i <= n; i++) {
   if(i == numberToFind){
   console.log('found ${numberToFind}!');
@@ -78,8 +95,6 @@ let n = Math.round(Math.random() * (500 - 100) + 100);
 
  if (i == n) {
   console.log('Did not find number ${numberToFind} within 1-$(n)..');
- }
-
-
- 
+ break;
+}
 }
