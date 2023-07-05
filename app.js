@@ -98,3 +98,27 @@ let n = Math.round(Math.random() * (500 - 100) + 100);
  break;
 }
 }
+
+//Exercise 5; Customized FizzBuzz
+
+let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1); // creates a random number between 1 and 10
+let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1); // creates a random number between 1 and 10
+let start = Math.round(Math.random() * (10 - 1) + 1); // creates a random number between 1 and 10
+let end = Math.round(Math.random() * (1000 - 100) + 100); // creates a random number between 100 and 1000
+
+for (let i = start; i <= end; i++) {
+ let output = "";
+
+if (i % fizzDivisor == 0) {
+  output += "Fizz";
+}
+  
+  if (i % buzzDivisor == 0) {
+    output += "Buzz";
+  }
+  
+  
+  
+  console.log(`${i} ${output}`);
+}
+console.log("fizzDivisor, buzzDivisor");
